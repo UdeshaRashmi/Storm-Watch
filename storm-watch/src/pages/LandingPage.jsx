@@ -13,10 +13,9 @@ const LandingPage = () => {
   const [open, setOpen] = useState(false);
   return (
     <div className="bg-black text-white w-full overflow-x-hidden">
-
-
-  
-
+      {/* ---------------- NAVBAR ---------------- */}
+      <header className="py-6 max-w-[1400px] mx-auto px-6">
+        <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center">
@@ -26,6 +25,36 @@ const LandingPage = () => {
             </div>
             <h1 className="font-semibold text-lg">Storm Watch</h1>
           </div>
+
+          {/* Desktop Menu */}
+          <nav className="hidden md:flex items-center gap-8 text-gray-400 text-sm">
+            <a href="#home" className="hover:text-white">Home</a>
+            <a href="#brand" className="hover:text-white">Brand Experience</a>
+            <a href="#manual" className="hover:text-white">Users Manual</a>
+            <a href="#guarantee" className="hover:text-white">Guarantee</a>
+            <a href="#contact" className="hover:text-white">Contact</a>
+          </nav>
+
+          {/* Preorder Button (Desktop) */}
+          <button className="hidden md:block bg-lime-400 text-black px-4 py-2 rounded font-semibold">
+            Pre-order – $1800
+          </button>
+
+          {/* Mobile Menu Icon */}
+          <button
+            className="md:hidden text-white"
+            onClick={() => setOpen(!open)}
+          >
+            {open ? (
+              <svg width="28" height="28" fill="none" stroke="#fff">
+                <path d="M6 6l16 16M22 6L6 22" />
+              </svg>
+            ) : (
+              <svg width="28" height="28" fill="none" stroke="#fff">
+                <path d="M4 8h20M4 16h20" />
+              </svg>
+            )}
+          </button>
         </div>
 
         {/* Mobile Menu */}
@@ -43,16 +72,6 @@ const LandingPage = () => {
           </div>
         )}
       </header>
-
-
-
-
-
-
-
-
-
-
 
       <main className="max-w-[1400px] mx-auto px-6">
 
@@ -81,7 +100,7 @@ const LandingPage = () => {
           <div>
             <h3 className="text-3xl md:text-4xl font-bold">Battery life for days.</h3>
             <p className="text-gray-400 mt-4 max-w-lg">
-              When you’re on day two of a backpacking trip or deep into a long ride, the
+              When you're on day two of a backpacking trip or deep into a long ride, the
               last thing you want is a dead battery. Storm Pro keeps going as long as you do.
             </p>
 
