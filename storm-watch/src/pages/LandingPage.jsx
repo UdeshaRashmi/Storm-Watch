@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // Placeholder images - replace with actual images when available
 const hero = "https://via.placeholder.com/600x400/000000/00ff00?text=STORM+PRO";
@@ -10,34 +10,49 @@ const band3 = "https://via.placeholder.com/200x200/000000/00ff00?text=TRAIL+LOOP
 const ctaWatch = "https://via.placeholder.com/300x300/000000/00ff00?text=CTA+WATCH";
 
 const LandingPage = () => {
+  const [open, setOpen] = useState(false);
   return (
     <div className="bg-black text-white w-full overflow-x-hidden">
 
-      {/* ---------------- NAVBAR ---------------- */}
-      <header className="py-6 max-w-[1400px] mx-auto px-6">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <div className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center">
-              <svg width="16" height="16" fill="none" className="text-white">
-                <circle cx="8" cy="8" r="7" stroke="white" />
+
+  
+
+          {/* Logo */}
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center">
+              <svg width="16" height="16" fill="none" stroke="#fff">
+                <circle cx="8" cy="8" r="7" />
               </svg>
             </div>
             <h1 className="font-semibold text-lg">Storm Watch</h1>
           </div>
-
-          <nav className="hidden md:flex items-center gap-8 text-sm text-gray-400">
-            <a href="#home" className="hover:text-white">Home</a>
-            <a href="#brand" className="hover:text-white">Brand Experience</a>
-            <a href="#manual" className="hover:text-white">Users Manual</a>
-            <a href="#guarantee" className="hover:text-white">Guarantee</a>
-            <a href="#contact" className="hover:text-white">Contact</a>
-          </nav>
-
-          <button className="bg-lime-400 text-black px-4 py-2 rounded font-semibold">
-            Pre-order – $1800
-          </button>
         </div>
+
+        {/* Mobile Menu */}
+        {open && (
+          <div className="md:hidden px-6 py-4 flex flex-col gap-3 text-gray-300 border-t border-gray-800">
+            <a href="#home" className="py-1">Home</a>
+            <a href="#brand" className="py-1">Brand Experience</a>
+            <a href="#manual" className="py-1">Users Manual</a>
+            <a href="#guarantee" className="py-1">Guarantee</a>
+            <a href="#contact" className="py-1">Contact</a>
+
+            <button className="w-full bg-lime-400 text-black py-2 rounded font-semibold mt-2">
+              Pre-order – $1800
+            </button>
+          </div>
+        )}
       </header>
+
+
+
+
+
+
+
+
+
+
 
       <main className="max-w-[1400px] mx-auto px-6">
 
