@@ -1,21 +1,21 @@
 import React, { useState } from "react";
 
-// Placeholder images - replace with actual images when available
-const hero = "https://via.placeholder.com/600x400/000000/00ff00?text=STORM+PRO";
-const watchClose = "https://via.placeholder.com/300x300/000000/00ff00?text=WATCH+CLOSE";
-const watchHealth = "https://via.placeholder.com/300x300/000000/00ff00?text=HEALTH+WATCH";
-const band1 = "https://via.placeholder.com/200x200/000000/00ff00?text=ALPINE+LOOP";
-const band2 = "https://via.placeholder.com/200x200/000000/00ff00?text=OCEAN+BAND";
-const band3 = "https://via.placeholder.com/200x200/000000/00ff00?text=TRAIL+LOOP";
-const ctaWatch = "https://via.placeholder.com/300x300/000000/00ff00?text=CTA+WATCH";
+ 
+const hero = "https://smartixtech.com/cdn/shop/files/VFitActiveWatch23.3_1800x.jpg?v=1752927446";
+const watchClose = "https://www.boat-lifestyle.com/cdn/shop/products/Untitled-5.png?v=1658294451";
+const watchHealth = "https://img.drz.lazcdn.com/g/kf/S12582292e1bf45fe94750c9e79b91a8cE.jpg_2200x2200q80.jpg_.webp";
+const ctaWatch = "https://goboult.co.in/cdn/shop/files/Artboard10_26528ce2-945f-4cba-b72d-a2fa3a22801d_500x500.jpg?v=1756965540";
 
 const LandingPage = () => {
   const [open, setOpen] = useState(false);
+
   return (
     <div className="bg-black text-white w-full overflow-x-hidden">
-      {/* ---------------- NAVBAR ---------------- */}
-      <header className="py-6 max-w-[1400px] mx-auto px-6">
-        <div className="flex items-center justify-between">
+      
+      {/* HEADER */}
+      <header className="sticky top-0 z-50 bg-black/90 backdrop-blur-sm border-b border-gray-800">
+        <div className="max-w-[1400px] mx-auto px-6 py-4 flex items-center justify-between">
+          
           {/* Logo */}
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center">
@@ -28,30 +28,30 @@ const LandingPage = () => {
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex items-center gap-8 text-gray-400 text-sm">
-            <a href="#home" className="hover:text-white">Home</a>
-            <a href="#brand" className="hover:text-white">Brand Experience</a>
-            <a href="#manual" className="hover:text-white">Users Manual</a>
-            <a href="#guarantee" className="hover:text-white">Guarantee</a>
-            <a href="#contact" className="hover:text-white">Contact</a>
+            <a href="#home" className="hover:text-white transition-colors">Home</a>
+            <a href="#brand" className="hover:text-white transition-colors">Brand Experience</a>
+            <a href="#manual" className="hover:text-white transition-colors">Users Manual</a>
+            <a href="#guarantee" className="hover:text-white transition-colors">Guarantee</a>
+            <a href="#contact" className="hover:text-white transition-colors">Contact</a>
           </nav>
 
           {/* Preorder Button (Desktop) */}
-          <button className="hidden md:block bg-lime-400 text-black px-4 py-2 rounded font-semibold">
+          <button className="hidden md:block bg-lime-400 text-black px-6 py-2 rounded font-semibold hover:bg-lime-300 transition-colors">
             Pre-order – $1800
           </button>
 
           {/* Mobile Menu Icon */}
           <button
-            className="md:hidden text-white"
+            className="md:hidden text-white p-1"
             onClick={() => setOpen(!open)}
           >
             {open ? (
-              <svg width="28" height="28" fill="none" stroke="#fff">
-                <path d="M6 6l16 16M22 6L6 22" />
+              <svg width="24" height="24" fill="none" stroke="currentColor">
+                <path d="M6 6l12 12M18 6L6 18" />
               </svg>
             ) : (
-              <svg width="28" height="28" fill="none" stroke="#fff">
-                <path d="M4 8h20M4 16h20" />
+              <svg width="24" height="24" fill="none" stroke="currentColor">
+                <path d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             )}
           </button>
@@ -59,14 +59,14 @@ const LandingPage = () => {
 
         {/* Mobile Menu */}
         {open && (
-          <div className="md:hidden px-6 py-4 flex flex-col gap-3 text-gray-300 border-t border-gray-800">
-            <a href="#home" className="py-1">Home</a>
-            <a href="#brand" className="py-1">Brand Experience</a>
-            <a href="#manual" className="py-1">Users Manual</a>
-            <a href="#guarantee" className="py-1">Guarantee</a>
-            <a href="#contact" className="py-1">Contact</a>
+          <div className="md:hidden px-6 py-4 flex flex-col gap-3 text-gray-300 border-t border-gray-800 bg-black">
+            <a href="#home" className="py-2 hover:text-white transition-colors" onClick={() => setOpen(false)}>Home</a>
+            <a href="#brand" className="py-2 hover:text-white transition-colors" onClick={() => setOpen(false)}>Brand Experience</a>
+            <a href="#manual" className="py-2 hover:text-white transition-colors" onClick={() => setOpen(false)}>Users Manual</a>
+            <a href="#guarantee" className="py-2 hover:text-white transition-colors" onClick={() => setOpen(false)}>Guarantee</a>
+            <a href="#contact" className="py-2 hover:text-white transition-colors" onClick={() => setOpen(false)}>Contact</a>
 
-            <button className="w-full bg-lime-400 text-black py-2 rounded font-semibold mt-2">
+            <button className="w-full bg-lime-400 text-black py-3 rounded font-semibold mt-2 hover:bg-lime-300 transition-colors">
               Pre-order – $1800
             </button>
           </div>
@@ -105,13 +105,13 @@ const LandingPage = () => {
             </p>
 
             <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div className="p-4 rounded-lg bg-gray-900/40">
+              <div className="p-4 rounded-lg bg-gray-900/40 border border-gray-800">
                 <p className="text-sm text-gray-400">Up to</p>
                 <p className="text-2xl font-semibold text-lime-400">36 hours</p>
                 <p className="text-sm text-gray-400">normal use</p>
               </div>
 
-              <div className="p-4 rounded-lg bg-gray-900/40">
+              <div className="p-4 rounded-lg bg-gray-900/40 border border-gray-800">
                 <p className="text-sm text-gray-400">Up to</p>
                 <p className="text-2xl font-semibold text-lime-400">60 hours</p>
                 <p className="text-sm text-gray-400">low power mode</p>
@@ -131,7 +131,7 @@ const LandingPage = () => {
             {/* left features */}
             <div className="space-y-6 text-left">
               <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center flex-shrink-0">
                   <svg width="18" height="18" fill="none"><circle cx="9" cy="9" r="7" stroke="white"/></svg>
                 </div>
                 <div>
@@ -143,7 +143,7 @@ const LandingPage = () => {
               </div>
 
               <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center flex-shrink-0">
                   <svg width="18" height="18" fill="none"><rect width="16" height="16" x="1" y="1" rx="3" stroke="white"/></svg>
                 </div>
                 <div>
@@ -165,7 +165,7 @@ const LandingPage = () => {
             {/* right features */}
             <div className="space-y-6 text-left">
               <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center flex-shrink-0">
                   <svg width="18" height="18" fill="none"><circle cx="9" cy="9" r="7" stroke="white"/></svg>
                 </div>
                 <div>
@@ -177,7 +177,7 @@ const LandingPage = () => {
               </div>
 
               <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center flex-shrink-0">
                   <svg width="18" height="18" fill="none"><path d="M1 9h16" stroke="white"/></svg>
                 </div>
                 <div>
@@ -203,8 +203,8 @@ const LandingPage = () => {
 
           <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-8">
 
-            <div className="bg-gray-900/40 p-6 rounded-lg text-center">
-              <img src={band1} alt="Alpine Loop" className="w-40 mx-auto mb-4" />
+            <div className="bg-gray-900/40 p-6 rounded-lg text-center border border-gray-800 hover:border-lime-400/30 transition-colors">
+              
               <h4 className="font-semibold">Alpine Loop</h4>
               <p className="text-lime-400 font-bold mt-1">$1,800</p>
               <p className="text-gray-400 text-sm mt-2">
@@ -212,8 +212,8 @@ const LandingPage = () => {
               </p>
             </div>
 
-            <div className="bg-gray-900/40 p-6 rounded-lg text-center">
-              <img src={band2} alt="Ocean Band" className="w-40 mx-auto mb-4" />
+            <div className="bg-gray-900/40 p-6 rounded-lg text-center border border-gray-800 hover:border-lime-400/30 transition-colors">
+              
               <h4 className="font-semibold">Ocean Band</h4>
               <p className="text-lime-400 font-bold mt-1">$1,999</p>
               <p className="text-gray-400 text-sm mt-2">
@@ -221,8 +221,8 @@ const LandingPage = () => {
               </p>
             </div>
 
-            <div className="bg-gray-900/40 p-6 rounded-lg text-center">
-              <img src={band3} alt="Trail Loop" className="w-40 mx-auto mb-4" />
+            <div className="bg-gray-900/40 p-6 rounded-lg text-center border border-gray-800 hover:border-lime-400/30 transition-colors">
+               
               <h4 className="font-semibold">Trail Loop</h4>
               <p className="text-lime-400 font-bold mt-1">$2,075</p>
               <p className="text-gray-400 text-sm mt-2">
@@ -234,7 +234,7 @@ const LandingPage = () => {
         </section>
 
         {/* ---------------- CTA SECTION ---------------- */}
-        <section className="mt-24 bg-gray-900/30 p-10 rounded-xl">
+        <section className="mt-24 bg-gray-900/30 p-10 rounded-xl border border-gray-800">
           <div className="flex flex-col md:flex-row items-center gap-10">
 
             <div className="flex-1">
@@ -252,7 +252,7 @@ const LandingPage = () => {
                 <li>• 3% Daily Cash back</li>
               </ul>
 
-              <button className="mt-6 bg-lime-400 text-black px-6 py-3 rounded font-semibold">
+              <button className="mt-6 bg-lime-400 text-black px-6 py-3 rounded font-semibold hover:bg-lime-300 transition-colors">
                 Pre-order Storm Watch – $1800
               </button>
             </div>
@@ -265,10 +265,10 @@ const LandingPage = () => {
 
           </div>
 
-          <div className="mt-10 text-center bg-gray-900/20 p-8 rounded">
+          <div className="mt-10 text-center bg-gray-900/20 p-8 rounded border border-gray-700">
             <h4 className="text-xl font-semibold">Get your smart watch now</h4>
             <p className="text-gray-400 mt-1">Get 3% cashback for pre-orders</p>
-            <button className="mt-4 bg-lime-400 text-black px-6 py-2 rounded font-semibold">
+            <button className="mt-4 bg-lime-400 text-black px-6 py-2 rounded font-semibold hover:bg-lime-300 transition-colors">
               Pre-Order Now
             </button>
           </div>
@@ -276,7 +276,7 @@ const LandingPage = () => {
       </main>
 
       {/* ---------------- FOOTER ---------------- */}
-      <footer className="mt-24 py-12 border-t border-gray-800">
+      <footer id="contact" className="mt-24 py-12 border-t border-gray-800">
         <div className="max-w-[1400px] mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
 
           <div>
@@ -289,31 +289,31 @@ const LandingPage = () => {
           <div>
             <h4 className="font-semibold mb-3">Storm</h4>
             <ul className="text-gray-400 space-y-2 text-sm">
-              <li>Our Company</li>
-              <li>Our Story</li>
-              <li>Careers</li>
-              <li>Site Map</li>
+              <li className="hover:text-white cursor-pointer transition-colors">Our Company</li>
+              <li className="hover:text-white cursor-pointer transition-colors">Our Story</li>
+              <li className="hover:text-white cursor-pointer transition-colors">Careers</li>
+              <li className="hover:text-white cursor-pointer transition-colors">Site Map</li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-semibold mb-3">Support</h4>
             <ul className="text-gray-400 space-y-2 text-sm">
-              <li>Contact Us</li>
-              <li>FAQ</li>
-              <li>Customer Care</li>
-              <li>Warranty</li>
-              <li>Shipping</li>
+              <li className="hover:text-white cursor-pointer transition-colors">Contact Us</li>
+              <li className="hover:text-white cursor-pointer transition-colors">FAQ</li>
+              <li className="hover:text-white cursor-pointer transition-colors">Customer Care</li>
+              <li className="hover:text-white cursor-pointer transition-colors">Warranty</li>
+              <li className="hover:text-white cursor-pointer transition-colors">Shipping</li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-semibold mb-3">Social Media</h4>
             <ul className="text-gray-400 space-y-2 text-sm">
-              <li>Instagram</li>
-              <li>Facebook</li>
-              <li>LinkedIn</li>
-              <li>Twitter</li>
+              <li className="hover:text-white cursor-pointer transition-colors">Instagram</li>
+              <li className="hover:text-white cursor-pointer transition-colors">Facebook</li>
+              <li className="hover:text-white cursor-pointer transition-colors">LinkedIn</li>
+              <li className="hover:text-white cursor-pointer transition-colors">Twitter</li>
             </ul>
           </div>
 
