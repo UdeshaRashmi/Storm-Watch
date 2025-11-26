@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
- 
+// Placeholder images - replace with actual images when available
 const hero = "https://smartixtech.com/cdn/shop/files/VFitActiveWatch23.3_1800x.jpg?v=1752927446";
 const watchClose = "https://www.boat-lifestyle.com/cdn/shop/products/Untitled-5.png?v=1658294451";
 const watchHealth = "https://img.drz.lazcdn.com/g/kf/S12582292e1bf45fe94750c9e79b91a8cE.jpg_2200x2200q80.jpg_.webp";
-const ctaWatch = "https://goboult.co.in/cdn/shop/files/Artboard10_26528ce2-945f-4cba-b72d-a2fa3a22801d_500x500.jpg?v=1756965540";
+const ctaWatch = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEN3WSd6vPIlB2LDJjipMmKwNv4QXw1OMGEg&s";
 
 const LandingPage = () => {
   const [open, setOpen] = useState(false);
