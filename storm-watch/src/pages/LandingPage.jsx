@@ -216,10 +216,7 @@ const LandingPage = () => {
 
           <div className="mt-10 text-center bg-gray-900/30 p-8 rounded-lg border border-gray-700">
             <h4 className="text-xl font-semibold">Get your smart watch now</h4>
-            <p className="text-gray-400 mt-1">Get 3% cashback on pre-orders</p>
-            <button className="mt-4 bg-lime-400 text-black px-6 py-2 rounded font-semibold hover:bg-lime-300">
-              Pre-Order Now
-            </button>
+            <p className="text-gray-400 mt-1">Get 3% cashback on pre-orders</p>    
           </div>
         </section>
       </main>
